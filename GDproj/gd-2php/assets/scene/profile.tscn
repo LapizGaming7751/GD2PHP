@@ -1,0 +1,215 @@
+[gd_scene load_steps=3 format=3 uid="uid://b00qvggrgrxn"]
+
+[ext_resource type="Script" uid="uid://dc8xi0sm0nywv" path="res://scripts/profile.gd" id="1_veqb2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3kh8h"]
+bg_color = Color(0.31431612, 0.31431612, 0.31431603, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_veqb2")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Profile" type="Panel" parent="Panel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_3kh8h")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/HBoxContainer/Profile"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer/Profile/MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/HBoxContainer/Profile/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Welcome, <test>!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Email" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/Profile/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/HBoxContainer/Profile/MarginContainer/VBoxContainer/Email"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.2
+text = "Email:  "
+horizontal_alignment = 1
+
+[node name="Info" type="Label" parent="Panel/MarginContainer/HBoxContainer/Profile/MarginContainer/VBoxContainer/Email"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.8
+text = "ABC"
+horizontal_alignment = 1
+
+[node name="Log Out" type="Button" parent="Panel/MarginContainer/HBoxContainer/Profile/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Log Out"
+
+[node name="MsgPanel" type="Panel" parent="Panel/MarginContainer/HBoxContainer/Profile/MarginContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/HBoxContainer/Profile/MarginContainer/VBoxContainer/MsgPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/HBoxContainer/Profile/MarginContainer/VBoxContainer/MsgPanel/MarginContainer"]
+layout_mode = 2
+text = "Test Msg"
+
+[node name="Settings" type="Panel" parent="Panel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_3kh8h")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/HBoxContainer/Settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer/Settings/MarginContainer"]
+layout_mode = 2
+
+[node name="Edit" type="Panel" parent="Panel/MarginContainer/HBoxContainer/Settings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/HBoxContainer/Settings/MarginContainer/VBoxContainer/Edit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer/Settings/MarginContainer/VBoxContainer/Edit/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Email" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/Settings/MarginContainer/VBoxContainer/Edit/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/HBoxContainer/Settings/MarginContainer/VBoxContainer/Edit/MarginContainer/VBoxContainer/Email"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+text = "Email: "
+
+[node name="Value" type="LineEdit" parent="Panel/MarginContainer/HBoxContainer/Settings/MarginContainer/VBoxContainer/Edit/MarginContainer/VBoxContainer/Email"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.8
+
+[node name="User" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/Settings/MarginContainer/VBoxContainer/Edit/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/HBoxContainer/Settings/MarginContainer/VBoxContainer/Edit/MarginContainer/VBoxContainer/User"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+text = "Username: "
+
+[node name="Value" type="LineEdit" parent="Panel/MarginContainer/HBoxContainer/Settings/MarginContainer/VBoxContainer/Edit/MarginContainer/VBoxContainer/User"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.8
+
+[node name="Edit" type="Button" parent="Panel/MarginContainer/HBoxContainer/Settings/MarginContainer/VBoxContainer/Edit/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Edit Account"
+
+[node name="Delete" type="Panel" parent="Panel/MarginContainer/HBoxContainer/Settings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="Panel/MarginContainer/HBoxContainer/Settings/MarginContainer/VBoxContainer/Delete"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Delete" type="Button" parent="Panel/MarginContainer/HBoxContainer/Settings/MarginContainer/VBoxContainer/Delete/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.9490196, 0.21960784, 0.20784314, 1)
+text = "Delete Account"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+download_file = "res://cache.json"
+
+[connection signal="button_down" from="Panel/MarginContainer/HBoxContainer/Profile/MarginContainer/VBoxContainer/Log Out" to="." method="logOut"]
+[connection signal="button_down" from="Panel/MarginContainer/HBoxContainer/Settings/MarginContainer/VBoxContainer/Edit/MarginContainer/VBoxContainer/Edit" to="." method="editAccount"]
+[connection signal="button_down" from="Panel/MarginContainer/HBoxContainer/Settings/MarginContainer/VBoxContainer/Delete/MarginContainer2/Delete" to="." method="deleteAccount"]
