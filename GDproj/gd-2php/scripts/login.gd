@@ -27,7 +27,7 @@ func _on_LoginButton_button_down() -> void:
 	
 	HTTP.request(url,headers,HTTPClient.METHOD_POST,body)
 
-func on_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
+func on_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
 	var json = FileAccess.open("res://cache.json",FileAccess.READ).get_as_text()
 	json = JSON.parse_string(json)
 	
