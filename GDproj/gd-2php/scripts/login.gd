@@ -58,4 +58,4 @@ func on_request_completed(_result: int, _response_code: int, _headers: PackedStr
 		else:
 			msgLabel.text = "Login failed: " + json["message"]
 	else:
-		msgLabel.text = "Login failed: "+body.get_string_from_utf8()
+		msgLabel.text = "Login failed: "+json["message"]
